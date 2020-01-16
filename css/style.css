@@ -1,4 +1,44 @@
-.fancy-header{
+
+h1{
+    text-align: center;
+}
+
+header{
     color: purple;
     text-decoration: underline;
+}
+
+body{
+    background: lightgreen;
+    background-image: url("../img/white-wall.jpg");
+    font-family: Chalkboard;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+ol{
+    list-style-type: upper-alpha;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+a:link{
+    color: deeppink;
+}
+
+a:visited{
+    color: orangered;
+}
+
+a:hover{
+    color: darkmagenta;
+}
+
+a:active{
+    color: darkblue;
+
 }
