@@ -9,15 +9,28 @@
     <title>Residential Lease Application</title>
 </head>
 <body>
-<form method="POST" action="">
-    <label for="property-address">Property Address</label>
-    <input id="property-address" name="property-address" type="text">
-    <br>
-    <label for="move-in-date">Anticipated Move-in Date</label>
-    <input id="move-in-date" name=""
+    <form method="POST" action="">
+        <label for="property-address">Property Address:</label>
+        <input id="property-address" name="property-address" type="text">
+        <br>
+        <br>
+        <label for="move-in-date">Anticipated Move-in Date:</label>
+        <input id="move-in-date" name="move-in-date" type="date">
+        <label for="rent">Monthly Rent:</label>
+        <input id="rent" name="rent" type="number">
+        <label for="deposit">Security Deposit:</label>
+        <input id="deposit" name="deposit" type="number">
+        <br>
+        <br>
+        <label for="referred-by">Applicant was referred to Landlord by: </label>
+        <br>
+        <input id="referred-by" name="referred-by" type="radio" value="agent">Real estate agent</input>
+        <input id="referred-by" name="referred-by" type="radio" value="newspaper">Newspaper</input>
+        <input id="referred-by" name="referred-by" type="radio" value="sign">Sign</option>
+        <input id="referred-by" name="referred-by" type="radio" value="internet">Internet</input>
+        <input id="referred-by" name="referred-by" type="radio" value="other">Other</option>
 
-
-</form>
+    </form>
 
 </body>
 </html>
