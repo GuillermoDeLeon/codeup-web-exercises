@@ -3,10 +3,12 @@ h1 {
 }
 
 .rectangle-left {
-    height: 200px;
-    width: 100px;
+
+    height: 202px;
+    width: 120px;
     border: solid black 1px;
     background-color: darkblue;
+    border-top: none;
 
 }
 .rectangle-top {
@@ -15,17 +17,17 @@ h1 {
     border: solid black 1px;
     background-color: white;
     position: relative;
-    left: 100px;
+    left: 120px;
 
 }
 
 .rectangle-bottom {
-    height: 100px;
+    height: 99px;
     width: 200px;
     border: solid black 1px;
     background-color: red;
     position: relative;
-    left: 100px;
+    left: 120px;
 
 
 }
