@@ -1,0 +1,31 @@
+h1 {
+    color: red;
+}
+
+.rectangle-left {
+    height: 200px;
+    width: 100px;
+    border: solid black 1px;
+    background-color: darkblue;
+
+}
+.rectangle-top {
+    height: 100px;
+    width: 200px;
+    border: solid black 1px;
+    background-color: white;
+    position: relative;
+    left: 100px;
+
+}
+
+.rectangle-bottom {
+    height: 100px;
+    width: 200px;
+    border: solid black 1px;
+    background-color: red;
+    position: relative;
+    left: 100px;
+
+
+}
