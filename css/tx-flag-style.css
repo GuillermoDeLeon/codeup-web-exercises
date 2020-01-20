@@ -2,6 +2,7 @@ h1 {
     color: red;
 }
 
+/* vertical rectangle on the left which will hold the star */
 .rectangle-left {
 
     height: 202px;
@@ -11,6 +12,8 @@ h1 {
     border-top: none;
 
 }
+
+/* white  horizontal rectangle that makes up top part of flag */
 .rectangle-top {
     height: 100px;
     width: 200px;
@@ -18,9 +21,8 @@ h1 {
     background-color: white;
     position: relative;
     left: 120px;
-
 }
-
+/* red  horizontal rectangle that makes up bottom part of flag */
 .rectangle-bottom {
     height: 99px;
     width: 200px;
@@ -28,6 +30,4 @@ h1 {
     background-color: red;
     position: relative;
     left: 120px;
-
-
 }
