@@ -80,21 +80,21 @@ a {
 
 .profile-details {
     width: calc(25% - margin);
-    margin: .5em 0em;
+    margin: .5em;
     float: left;
 
 }
 
 .timeline {
     width: calc(50%-.margin);
-    margin: .5em 0;
+    margin: .5em;
     float: left;
 
 }
 
 .who-to-follow {
     width: calc(25-margin);
-    margin: .5em 0;
+    margin: .5em;
     float: left;
 }
 
