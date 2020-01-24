@@ -1,0 +1,59 @@
+/*This exercise did not use semantic tags.  I used div tags and the class container to create and also used the grid-area property to manually place cells in the grid*/
+
+* {
+    background: rgb(255,220,0);
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 60px;
+    color: white;
+}
+
+.container {
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+/* ids below used grid-area to place cells in grid */
+
+#box-1 {
+    grid-area: 1/1 / 2/-1;
+}
+#box-2 {
+    grid-area: 2/1 / -1/2;
+}
+#box-3 {
+    grid-area: 2/2 / 3/3;
+}
+#box-4 {
+    grid-area: 2/3  / 3/-1;
+}
+#box-5 {
+    grid-area: 3/2  / 4/4;
+}
+#box-6 {
+    grid-area: 3/4  / 4/-1;
+}
+
+#box-7 {
+    grid-area: 4/2 / 5/3;
+}
+
+#box-8 {
+
+}
+
+#box-9 {
+
+}
+#box-10 {
+    grid-area: 5/2  / -1/-1;
+
+}
+
+

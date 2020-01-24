@@ -1,0 +1,39 @@
+* {
+    background: greenyellow;
+    margin: 0;
+}
+
+main {
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-gap: .7em;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-template-rows: 70px 1fr 1fr 60px 70px;
+    grid-template-areas:
+                    "h h h"
+                    "n ar ar"
+                    "n ar ar"
+                    "n ad ad"
+                    "f f f";
+}
+
+#header-id {
+    grid-area: h;
+}
+
+#nav-id {
+    grid-area: n;
+}
+
+#article-id {
+    grid-area: ar;
+}
+
+#ads-id {
+    grid-area: ad;
+}
+
+#footer-id {
+    grid-area: f;
+}

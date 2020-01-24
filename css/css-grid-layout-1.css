@@ -1,0 +1,44 @@
+
+* {
+    box-sizing: border-box;
+    background: yellow;
+    margin: 0;
+}
+
+main {
+    /*display: grid;*/
+
+}
+
+div {
+    height: 100vh;
+    background: white;
+    display: grid;
+    grid-gap: .5em;
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-template-areas:
+            "header header header"
+            "nav article ads"
+            "nav footer footer";
+
+}
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+}
+
+aside {
+    grid-area: ads;
+}
+
+footer {
+    grid-area: footer;
+}
