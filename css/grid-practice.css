@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    background: lightgreen;
+}
+
+main div {
+    font-size: 2em;
+    color: white;
+    background: grey;
+    border: 2px solid black;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+}

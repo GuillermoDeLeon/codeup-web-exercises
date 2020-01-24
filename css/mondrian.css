@@ -1,0 +1,124 @@
+h1 {
+    color: red;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+main {
+    background: lightgreen;
+    width: 500px;
+    height: 500px;
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    /*grid-template-areas:*/
+    /*            "bl bl rd rd rd rd rd rd"*/
+    /*            "bl bl rd rd rd rd rd rd"*/
+    /*            "yel yel rd rd rd rd rd rd"*/
+    /*            "yel yel rd rd rd rd rd rd"*/
+    /*            "yel yel . . . . . ."*/
+    /*            ". . . . . . . ."*/
+    /*            ". . . . . . . ."*/
+    /*            "wh wh wh wh wh wh wh wh";*/
+
+    /*grid-template-areas:*/
+    /*        "bl bl rd rd rd rd rd rd"*/
+    /*        "bl bl rd rd rd rd rd rd"*/
+    /*        "yel yel rd rd rd rd rd rd"*/
+    /*        "yel yel rd rd rd rd rd rd"*/
+    /*        "yel yel . . . . . ."*/
+    /*        ". . . . . . . ."*/
+    /*        ". . . . . . . ."*/
+    /*        "wh . . . . . . .";*/
+
+    /*grid-template-areas:*/
+    /*        "bl bl rd rd rd rd rd rd"*/
+    /*        "bl bl rd rd rd rd rd rd"*/
+    /*        "yel yel rd rd rd rd rd rd"*/
+    /*        "yel yel rd rd rd rd rd rd"*/
+    /*        "yel yel . . . . . ."*/
+    /*        ". . . . . . . ."*/
+    /*        ". . . . . . . ."*/
+    /*        "rd . . . . . . .";*/
+
+    /*grid-template-areas:*/
+    /*            "bl bl rd rd rd rd rd rd"*/
+    /*            "bl bl rd rd rd rd rd rd"*/
+    /*            "yel yel rd rd rd rd rd rd"*/
+    /*            "yel yel rd rd rd rd rd rd"*/
+    /*            "yel yel . . . . . ."*/
+    /*            ". . . . . . . ."*/
+    /*            ". . . . . . . ."*/
+    /*            "wh wh wh wh wh wh wh wh";*/
+
+    /*grid-template-areas:*/
+    /*            "bl bl rd rd rd rd rd rd"*/
+    /*            "bl bl rd rd rd rd rd rd"*/
+    /*            "yel yel rd rd rd rd rd rd"*/
+    /*            "yel yel rd rd rd rd rd rd"*/
+    /*            "yel yel . . . . . ."*/
+    /*            ". . . . . . . ."*/
+    /*            ". . . . . . . ."*/
+    /*            "rd wh wh wh wh wh wh wh";*/
+
+    /*grid-template-areas: ". . . . . . . ."*/
+    /*                    "bl bl rd rd rd rd rd rd"*/
+    /*                    "yel yel rd rd rd rd rd rd"*/
+    /*                    "yel yel rd rd rd rd rd rd"*/
+    /*                    "yel yel . . . . . ."*/
+    /*                    ". . . . . . . ."*/
+    /*                    ". . . . . . . ."*/
+    /*                    "wh wh wh wh wh wh wh wh";*/
+
+                        /*“rd rd bl bl bl bl bl bl“;*/
+
+    grid-template-areas:
+                    "rd . . . . . . ."
+                    ". bl . . . . . ."
+                    ". . yel . . . . ."
+                    ". . . wh . . . ."
+                    ". . . . . . . ."
+                    ". . . . . rd . ."
+                    ". . . . . . . ."
+                    ". . . . . . . .";
+
+}
+
+main div {
+    font-size: 2em;
+    color: white;
+    background: grey;
+    border: 2px solid black;
+    /*display: flex;*/
+    /*justify-content: center;*/
+
+}
+
+.bl {
+    grid-area: bl;
+    background: blue;
+
+}
+
+.rd {
+    grid-area: rd;
+    background: red;
+}
+
+.wh {
+    grid-area: wh;
+    background: white;
+}
+
+.yel {
+    grid-area: yel;
+    background: yellow;
+}
+
