@@ -1,0 +1,60 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    background: black;
+    width: 500px;
+    height: 500px;
+    display: inline-grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+                    "rd . . . . . . ."
+                    ". . . . . . . ."
+                    ". . yel . . . . ."
+                    ". . . wh . . . ."
+                    ". . . . . . . ."
+                    ". . . . . . . ."
+                    ". . . . . . . ."
+                    ". . . . . . . .";
+
+}
+
+main div {
+    font-size: 2em;
+    color: white;
+
+    border: 1px solid black;
+    /*display: flex;*/
+    /*justify-content: center;*/
+
+}
+
+.bl {
+    grid-area: bl;
+    background: blue;
+
+}
+
+.rd {
+    grid-area: rd;
+    background: red;
+}
+
+.wh {
+    grid-area: wh;
+    background: white;
+}
+
+.yel {
+    grid-area: yel;
+    background: yellow;
+}
+

@@ -1,124 +1,80 @@
-h1 {
-    color: red;
-}
-
 * {
     box-sizing: border-box;
 }
 
 body {
     text-align: center;
+    margin: 1em;
 }
 
 main {
-    background: lightgreen;
+    background: black;
+    border: 6px solid black;
     width: 500px;
     height: 500px;
-    display: grid;
-
+    display: inline-grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    /*grid-template-areas:*/
-    /*            "bl bl rd rd rd rd rd rd"*/
-    /*            "bl bl rd rd rd rd rd rd"*/
-    /*            "yel yel rd rd rd rd rd rd"*/
-    /*            "yel yel rd rd rd rd rd rd"*/
-    /*            "yel yel . . . . . ."*/
-    /*            ". . . . . . . ."*/
-    /*            ". . . . . . . ."*/
-    /*            "wh wh wh wh wh wh wh wh";*/
-
-    /*grid-template-areas:*/
-    /*        "bl bl rd rd rd rd rd rd"*/
-    /*        "bl bl rd rd rd rd rd rd"*/
-    /*        "yel yel rd rd rd rd rd rd"*/
-    /*        "yel yel rd rd rd rd rd rd"*/
-    /*        "yel yel . . . . . ."*/
-    /*        ". . . . . . . ."*/
-    /*        ". . . . . . . ."*/
-    /*        "wh . . . . . . .";*/
-
-    /*grid-template-areas:*/
-    /*        "bl bl rd rd rd rd rd rd"*/
-    /*        "bl bl rd rd rd rd rd rd"*/
-    /*        "yel yel rd rd rd rd rd rd"*/
-    /*        "yel yel rd rd rd rd rd rd"*/
-    /*        "yel yel . . . . . ."*/
-    /*        ". . . . . . . ."*/
-    /*        ". . . . . . . ."*/
-    /*        "rd . . . . . . .";*/
-
-    /*grid-template-areas:*/
-    /*            "bl bl rd rd rd rd rd rd"*/
-    /*            "bl bl rd rd rd rd rd rd"*/
-    /*            "yel yel rd rd rd rd rd rd"*/
-    /*            "yel yel rd rd rd rd rd rd"*/
-    /*            "yel yel . . . . . ."*/
-    /*            ". . . . . . . ."*/
-    /*            ". . . . . . . ."*/
-    /*            "wh wh wh wh wh wh wh wh";*/
-
-    /*grid-template-areas:*/
-    /*            "bl bl rd rd rd rd rd rd"*/
-    /*            "bl bl rd rd rd rd rd rd"*/
-    /*            "yel yel rd rd rd rd rd rd"*/
-    /*            "yel yel rd rd rd rd rd rd"*/
-    /*            "yel yel . . . . . ."*/
-    /*            ". . . . . . . ."*/
-    /*            ". . . . . . . ."*/
-    /*            "rd wh wh wh wh wh wh wh";*/
-
-    /*grid-template-areas: ". . . . . . . ."*/
-    /*                    "bl bl rd rd rd rd rd rd"*/
-    /*                    "yel yel rd rd rd rd rd rd"*/
-    /*                    "yel yel rd rd rd rd rd rd"*/
-    /*                    "yel yel . . . . . ."*/
-    /*                    ". . . . . . . ."*/
-    /*                    ". . . . . . . ."*/
-    /*                    "wh wh wh wh wh wh wh wh";*/
-
-                        /*“rd rd bl bl bl bl bl bl“;*/
-
-    grid-template-areas:
-                    "rd . . . . . . ."
-                    ". bl . . . . . ."
-                    ". . yel . . . . ."
-                    ". . . wh . . . ."
-                    ". . . . . . . ."
-                    ". . . . . rd . ."
-                    ". . . . . . . ."
-                    ". . . . . . . .";
-
+    grid-gap: 6px;
 }
 
 main div {
-    font-size: 2em;
-    color: white;
-    background: grey;
-    border: 2px solid black;
+    /*font-size: 2em;*/
+    /*color: white;*/
+    /*border: 1px solid black;*/
     /*display: flex;*/
     /*justify-content: center;*/
-
 }
 
-.bl {
-    grid-area: bl;
+.box-1 {
     background: blue;
-
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
 }
 
-.rd {
-    grid-area: rd;
+.box-2{
     background: red;
+    grid-row: 1 / 4;
+    grid-column: 3 / 9;
 }
 
-.wh {
-    grid-area: wh;
-    background: white;
-}
-
-.yel {
-    grid-area: yel;
+.box-3 {
     background: yellow;
+    grid-row: 3 / 6;
+    grid-column: 1 / 3;
 }
 
+.box-4{
+    background: white;
+    grid-row: 4 / 8;
+    grid-column: 3 / 5;
+}
+.box-5 {
+    background: white;
+    grid-row: 4 / 6;
+    grid-column: 5 / 9;
+}
+
+.box-6{
+    background: white;
+    grid-row: 6 / 8;
+    grid-column: 1 / 3;
+}
+
+.box-7 {
+    background: yellow;
+    grid-row: 6 / 8;
+    grid-column: 5 / 9;
+}
+
+.box-8{
+    background: red;
+    grid-row: 8 / 9;
+    grid-column: 1 / 3;
+}
+
+.box-9 {
+    background: blue;
+    grid-row: 8 / 9;
+    grid-column: 3 / 9;
+}
