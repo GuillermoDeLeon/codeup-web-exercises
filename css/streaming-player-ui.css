@@ -16,6 +16,12 @@ body {
     /* TODO: add a gap of 1em around all grid items */
     /* no row properties are needed */
     /* TODO: the height of the wrapper should be 100 viewport height units */
+
+    display: inline-grid;
+    grid-template-columns: auto 400px 400px 400px auto;
+    grid-gap: 1em;
+    height: 100vh;
+
 }
 
 ul {
@@ -27,6 +33,7 @@ ul {
 header {
     background: purple;
     /* TODO: define the grid area of header such that it takes up the first row and middle three columns */
+    grid-row: 1 /2 /2/ span 3;
 }
 
 nav {

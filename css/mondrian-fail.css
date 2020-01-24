@@ -16,10 +16,10 @@ main {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     grid-template-areas:
-                    "rd . . . . . . ."
+                    "bl bl rd rd . . . ."
                     ". . . . . . . ."
-                    ". . yel . . . . ."
-                    ". . . wh . . . ."
+                    "yel yel . . . . . ."
+                    ". . . wh wh . . ."
                     ". . . . . . . ."
                     ". . . . . . . ."
                     ". . . . . . . ."
