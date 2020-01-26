@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    background: white;
+    margin: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: #111111;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-rows: 40px 75% 1fr 1fr;
+    grid-template-areas:
+                    "nav-bar nav-bar nav-bar"
+                    "menu-bar content ads"
+                    "menu-bar pages pages"
+                    "menu-bar foot foot";
+}
+
+#nav-bar{
+    grid-area: nav-bar;
+    /*background-color: #111111;*/
+}
+
+#menu-bar {
+    grid-area: menu-bar;
+    background-color: rgb(240,240,240);
+}
+
+#content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+#content-row1{
+    /*border: 1px solid black;*/
+    padding: 20px;
+    grid-area: 1/1  /2/-1;
+}
+
+#content-row2{
+    /*border: 1px solid black;*/
+    padding: 20px;
+    grid-area: 2/1  / 3/-1;
+}
+
+#content-row3{
+    /*border: 1px solid black;*/
+    padding: 20px;
+    grid-area: 3/1  / 4/-1;
+}
+
+#content h2{
+    padding: 0px 0px 20px 0px;
+}
+
+#ads {
+    grid-area: ads;
+}
+
+#page-nav {
+    grid-area: pages;
+}
+
+#foot {
+    grid-area: foot;
+    color: white;
+    padding: 10px;
+    background-color: rgb(102,102,102);
+}
+
+#nav-bar ul {
+    padding-left: 100px;
+    background-color: #111111;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#nav-bar li{
+    color: white;  /*changes color of content - in the case the lettering in the top navigation bar*/
+    background-color: black;
+    margin: .5em;
+}
+
+#menu-bar li{
+    background-color: rgb(240,240,240);
+    padding: 10px;
+}
+
+#menu-bar h3{
+    background-color: rgb(240,240,240);
+}
+
+#menu-bar ul {
+    list-style: none;
+    background-color: rgb(240,240,240);
+    padding: 10px;
+}
