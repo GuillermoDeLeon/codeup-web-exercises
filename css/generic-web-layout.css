@@ -6,9 +6,7 @@
 
 .wrapper {
     height: 100vh;
-    background-color: #111111;
     display: grid;
-    grid-gap: 1px;
     grid-template-columns: 1fr 5fr 2fr;
     grid-template-rows: 40px 75% 1fr 1fr;
     grid-template-areas:
@@ -20,7 +18,18 @@
 
 #nav-bar{
     grid-area: nav-bar;
-    /*background-color: #111111;*/
+}
+
+#nav-bar a {
+    background-color: #111111;
+    color: white;
+    text-decoration: none;
+}
+
+#nav-bar a:hover {
+    color: blue;
+    background-color: white;
+    padding: 1em;
 }
 
 #menu-bar {
@@ -33,37 +42,72 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
 }
 
 #content-row1{
-    /*border: 1px solid black;*/
     padding: 20px;
     grid-area: 1/1  /2/-1;
 }
 
 #content-row2{
-    /*border: 1px solid black;*/
     padding: 20px;
     grid-area: 2/1  / 3/-1;
 }
 
 #content-row3{
-    /*border: 1px solid black;*/
     padding: 20px;
     grid-area: 3/1  / 4/-1;
 }
 
 #content h2{
-    padding: 0px 0px 20px 0px;
+    padding: 0 0 20px 0;
 }
 
 #ads {
     grid-area: ads;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.ads-row {
+    background-color: white;
+}
+
+.small-box {
+    text-align: center;
+    margin: 1em;
+    padding: 11px;
+    border: 1px solid lightgray;
+}
+
+.big-box {
+    text-align: center;
+    margin: 1em;
+    padding: 33px;
+    border: 1px solid lightgray;
 }
 
 #page-nav {
     grid-area: pages;
+    text-align: center;
+}
+
+#page-nav ul {
+    padding: 0 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#page-nav li a {
+    padding: 15px;
+    text-decoration: none;
+}
+
+#page-nav a:hover {
+    background-color: black;
+    color: white;
 }
 
 #foot {
@@ -80,13 +124,14 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
 }
 
 #nav-bar li{
-    color: white;  /*changes color of content - in the case the lettering in the top navigation bar*/
+    border: none;
+    padding: 10px;
+    color: white;
     background-color: black;
-    margin: .5em;
+    margin: 1px;
 }
 
 #menu-bar li{
@@ -102,4 +147,28 @@
     list-style: none;
     background-color: rgb(240,240,240);
     padding: 10px;
+}
+
+#menu-bar li a {
+    background-color: rgb(240,240,240);
+    text-decoration: none;
+}
+#menu-bar a:hover {
+    background-color: rgb(240,240,240);
+    text-decoration: none;
+    font-size: x-large;
+    color: darkgreen;
+}
+
+#nav-bar ul li.logo{
+}
+
+.logo {
+    background-color: #111111;
+    font-size: 2em;
+    color: white;
+    margin-left: 20px;
+    position: absolute;
+    height: inherit;
+    width: 70px;
 }
