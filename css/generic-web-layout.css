@@ -3,7 +3,7 @@
     background: white;
     margin: 0;
 }
-
+/*main container for the page*/
 .wrapper {
     height: 100vh;
     display: grid;
@@ -16,6 +16,7 @@
                     "menu-bar foot foot";
 }
 
+/*3 nav-bar elements below place and adjust the navigation bar at top of page*/
 #nav-bar{
     grid-area: nav-bar;
 }
@@ -25,7 +26,7 @@
     color: white;
     text-decoration: none;
 }
-
+/*applies styling when hovering over links in the navigation bar at the top of page*/
 #nav-bar a:hover {
     color: blue;
     background-color: white;
@@ -134,6 +135,7 @@
     margin: 1px;
 }
 
+/* the 5 menu-bar elements below are used to adjust the styling of the side menu bar*/
 #menu-bar li{
     background-color: rgb(240,240,240);
     padding: 10px;
@@ -153,6 +155,7 @@
     background-color: rgb(240,240,240);
     text-decoration: none;
 }
+/*styling when hovering over links on menu side bar*/
 #menu-bar a:hover {
     background-color: rgb(240,240,240);
     text-decoration: none;
@@ -160,6 +163,7 @@
     color: darkgreen;
 }
 
+/*the 2 elements below are used to place and adjust Logo*/
 #nav-bar ul li.logo{
 }
 

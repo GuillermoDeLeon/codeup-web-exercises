@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+body .alert-info a {
+    color: black;
+
+}
+body nav li {
+    list-style: none;
+}
+.alert-info {
+    /*grid-area: a;*/
+    background-color: lightblue;
+    padding: 20px;
+    text-decoration: none;
+    border: #CCCCCC solid 2px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+}
+
+.alert-info a {
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+
+.hidden-on-desktop {
+    display: block;
+}
+
+.header-img {
+    height: 200px;
+    width: 500px;
+    text-align: center;
+    /*display: flex;*/
+
+}
+
+.nav-links {
+    padding: 0;
+}
+
+/*.nav-links li {*/
+/*    background: #CCCCCC;*/
+/*    height: 50px;*/
+/*    width: 500px;*/
+/*    text-align: center;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+.main {
+
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.main h2, .sub-section h2{
+    text-align: left;
+}
+
+
+.sub-section {
+
+    width: 500px;
+    text-align: center;
+
+}
+#social-media-links {
+    /*grid-area: f;*/
+}
+
+footer {
+    /*display: block;*/
+    /*width: 500px;*/
+    /*margin-right: auto;*/
+
+    width: 500px;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+@media screen and (max-width: 767px){
+
+    .nav-links li {
+        background: #CCCCCC;
+        height: 50px;
+        width: 500px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        margin: 0 auto;
+        height: 100vh;
+        grid-template-rows: 100px 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    body h1 {
+        grid-area: 1/1  / 2/2;
+    }
+
+    body nav  {
+        grid-area: 1/2  /2/3;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+
+    }
+
+    nav ul li {
+        padding: 20px;
+    }
+
+    body .header-img {
+        grid-area: 2/1 / 3/3;
+    }
+
+    body div a {
+        grid-area: 4/2  / 5/3
+    }
+
+}
