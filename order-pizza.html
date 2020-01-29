@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Hello, world!</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Order online<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
+<!--            sign-in button-->
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+<!--            end of sign-in button-->
+        </form>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="d-sm-none d-md-block">  <!--These classes hide the jumbotron on small screens; NOT extra small screens-->
+        <div class="jumbotron jumbotron-fluid" id="main-jumbotron">
+            <div class="container" id="jumbotron-container">
+                <h1 class="display-4">Welcome to Pizza World!</h1>
+                <!--        <p class="lead">Check out or selection of loving pets.</p>-->
+                <hr class="my-4">
+                <!--        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+                <!--        <a class="btn btn-primary btn-lg" href="#" role="button">Find your BFF</a>-->
+            </div>
+        </div>
+    </div>
+    <h2>Build your own pizza!</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#"><span class="badge badge-pill badge-secondary">1</span>Size and crust</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+        </li>
+    </ul>
+<!-- first card -->
+    <div class="card-group">
+        <div class="card">
+            <div class="card-header text-white bg-primary">Choose size and crust</div>
+            <div class="card-body">
+
+                This is some text within a card body.
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Card 1
+                    </li>
+                    <li class="list-group-item">
+                        Card 2
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer text-white bg-primary text-right">Next Step ></div>
+        </div>
+    </div>
+    <!-- second card -->
+    <div class="card">
+        <div class="card-header text-white bg-primary">Choose Cheese and Sauce</div>
+        <div class="card-body">
+
+            This is some text within a card body.
+        </div>
+        <div class="card-footer text-white bg-primary text-right">< Previous Step   Next Step></div>
+    </div>
+    <!-- third card -->
+    <div class="card">
+        <div class="card-header text-white bg-primary">Choose Toppings</div>
+        <div class="card-body">
+
+            This is some text within a card body.
+        </div>
+        <div class="card-footer text-white bg-light text-right">Checkout</div>
+    </div>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
