@@ -27,18 +27,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Menu</a>
             </li>
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
+                </form>
+            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
 <!--            sign-in button-->
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                </div>
-            </div>
+                    <button type="submit" class="btn btn-primary">Sign up</button>
 <!--            end of sign-in button-->
-        </form>
     </div>
 </nav>
 
@@ -67,41 +65,82 @@
         </li>
     </ul>
 <!-- first card -->
-    <div class="card-group">
-        <div class="card">
-            <div class="card-header text-white bg-primary">Choose size and crust</div>
-            <div class="card-body">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Choose size and crust</div>
+        <div class="card-deck">
+            <div class="card">
 
-                This is some text within a card body.
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        Card 1
-                    </li>
-                    <li class="list-group-item">
-                        Card 2
-                    </li>
-                </ul>
+                <div class="card-header">Hand Tossed</div>
+                <div class="card-body">
+                    <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-            <div class="card-footer text-white bg-primary text-right">Next Step ></div>
+            <br>
+            <div class="card">
+                <div class="card-header">Crispy Thin</div>
+                <div class="card-body">
+                    <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-right">
+            <button type="button" class="btn btn-primary">Next Step</button>
         </div>
     </div>
+
     <!-- second card -->
     <div class="card">
         <div class="card-header text-white bg-primary">Choose Cheese and Sauce</div>
-        <div class="card-body">
+        <div class="card-deck">
+            <div class="card">
 
-            This is some text within a card body.
+                <div class="card-header">Cheese</div>
+                <div class="card-body">
+                    <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">Sauce</div>
+                <div class="card-body">
+                    <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
         </div>
-        <div class="card-footer text-white bg-primary text-right">< Previous Step   Next Step></div>
+        <div class="card-footer text-right">
+            <button type="button" class="btn btn-primary">Previous Step</button>
+            <button type="button" class="btn btn-primary">Next Step</button>
+        </div>
     </div>
+
     <!-- third card -->
     <div class="card">
         <div class="card-header text-white bg-primary">Choose Toppings</div>
-        <div class="card-body">
+        <div class="card-deck">
+            <div class="card">
 
-            This is some text within a card body.
+                <div class="card-header">Choose Meats</div>
+                <div class="card-body">
+                    <p class="card-text">Garlic seasoned crust with a rich, buttery taste.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">Choose Non-meats</div>
+                <div class="card-body">
+                    <p class="card-text">Thin enough for optimum crispy to crunchy ratio.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
         </div>
-        <div class="card-footer text-white bg-light text-right">Checkout</div>
+        <div class="card-footer text-right">
+            <button type="button" class="btn btn-primary">Checkout</button>
+        </div>
     </div>
 </div>
 
