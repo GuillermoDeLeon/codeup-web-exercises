@@ -1,0 +1,126 @@
+body {
+    background-color: #E6E6E6;
+
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Anton', sans-serif;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+.circle1 {
+    background-color: #E6563B;
+    color: white;
+    border-radius: 50%;
+    /*padding: 40px 40px 40px 40px;*/
+    /*margin: 0 auto;*/
+    border: white solid 10px;
+    height: 150px;
+    width: 150px;
+
+
+}
+
+.circle2 {
+    background-color: #EB9D3A;
+    color: white;
+    border-radius: 50%;
+    /*padding: 40px 40px 40px 40px;*/
+    /*margin: 0 auto;*/
+    border: white solid 10px;
+    height: 150px;
+    width: 150px;
+}
+
+.circle3 {
+    background-color: #7CB06B;
+    color: white;
+    border-radius: 50%;
+    /*padding: 40px 40px 40px 40px;*/
+    /*margin: 0 auto;*/
+    border: white solid 10px;
+    height: 150px;
+    width: 150px;
+}
+
+.circle4 {
+    background-color: #00ABA9;
+    color: white;
+    border-radius: 50%;
+    /*padding: 40px 40px 40px 40px;*/
+    /*margin: 0 auto;*/
+    border: white solid 10px;
+    height: 150px;
+    width: 150px;
+}
+
+/*area that holds where the 4 colored circles are located*/
+.circle-container {
+    border: 100px;
+    padding: 100px;
+}
+.col-md-4 {
+    margin-top: 1.5em;
+    background-color: #E6E6E6;
+}
+.mb-3 {
+    background-color: #E6E6E6;
+    border: none;
+}
+/*.card-body {*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
+
+.button-1 {
+    background-color: #E6563B;
+    border: none;
+    content: 18px 18px;
+    justify-content: flex-end;
+}
+
+.button-2 {
+    background-color: #EB9D3A;
+    border: none;
+    content: 18px 18px;
+    display: inline-block;
+}
+.button-3 {
+    background-color: #7CB06B;
+    border: none;
+    content: 18px 18px;
+}
+
+.button-4 {
+    background-color: #00ABA9;
+    border: none;
+    content: 18px 18px;
+    display: inline-block;
+}
+
+.blank-banner {
+    margin-top: 20px;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.nav-link {
+    font-size: x-large;
+    color: black;
+}
+
+/*.icon {*/
+/*    padding: 4px 8px 4px 8px;*/
+/*    border: 10px solid #fff;*/
+/*    border-radius: 50%;*/
+/*    text-align: center;*/
+/*    background-color: #848487;*/
+/*}*/
