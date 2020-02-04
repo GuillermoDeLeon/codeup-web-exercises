@@ -17,15 +17,31 @@
     // }
     // firstToLast([1,2,3,4]);
 
-    function sumAll(nums) {
-        var sumOfNums = 0;
-        for (var i = 0; i < nums.length; i++) {
-            sumOfNums = sumOfNums + nums[i];
-        }
-        return console.log(sumOfNums);
-    }
-    sumAll([1,2,3,4,5]);
+    // function sumAll(nums) {
+    //     var sumOfNums = 0;
+    //     for (var i = 0; i < nums.length; i++) {
+    //         sumOfNums = sumOfNums + nums[i];
+    //     }
+    //     return console.log(sumOfNums);
+    // }
+    // sumAll([1,2,3,4,5]);
 
+
+    function median(nums) {
+        var avg = 0;
+        var sum = 0;
+        for (var i=0; i < nums.length; i++) {
+            sum = sum + nums[i];
+        }
+        avg = sum/nums.length;
+        return avg;
+    }
+
+    console.log(median([1,2,3,4]));
+    console.log(median([4,4,4,4]));
+
+    var points = [40, 100, 1, 5, 25, 10];
+    console.log(points.sort(function(a, b){return a - b}));
 
 </script>
 
