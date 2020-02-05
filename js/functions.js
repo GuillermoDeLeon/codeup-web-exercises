@@ -9,6 +9,14 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name) {
+    return console.log("Hello " + name + "!");
+}
+
+sayHello("Willie");
+sayHello("Kristie");
+
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -17,6 +25,9 @@
  * console.log 'helloMessage' to check your work
  */
 
+var helloMessage = sayHello('Guillermo');
+console.log(helloMessage);
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -24,9 +35,13 @@
  * console.
  */
 
+var myName = 'Guillermo2';
+sayHello(myName);
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
+
 
 /**
  * TODO:
@@ -46,6 +61,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(num){
+    return console.log(num === 2);
+}
+console.log(random);
+isTwo(random);
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +79,33 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+// function calculateTip(percent, billTotal) {
+//     return console.log(((percent*billTotal)) + billTotal);
+// }
+//
+// calculateTip(.20, 10);
+// calculateTip(.5, 6);
+// calculateTip(.15, 15);
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+// var customerBill;
+// var customerTip;
+//
+// customerBill = Number(prompt('How much was your total bill?'));
+// customerTip = Number(prompt('How much would you like to tip your server?'));
+//
+// alert('The cost for your meal tonight is $' + calculateTip(customerTip, customerBill));
+//
+// function calculateTip(percent, billTotal) {
+//      return (percent*billTotal + billTotal);
+// }
+
 
 /**
  * TODO:
@@ -79,3 +121,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(originalPrice, discountPercent) {
+    var discountedPrice = originalPrice - (originalPrice*discountPercent);
+    return discountedPrice;
+}
+
+console.log(applyDiscount(100, .5));
+console.log(applyDiscount(200, .10));
