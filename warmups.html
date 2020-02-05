@@ -71,18 +71,35 @@
         determineType(true);
 
     // Write a function that returns true or false based off whether the number passed, squared, is evenly divisible by 3.
-        function divBy3(num) {
+    //     function divBy3(num) {
+    //
+    //         squared = num*num;
+    //         result = squared/3;
+    //         if (result === 0) {
+    //             return console.log(true);}
+    //         else {
+    //                 return console.log(false);
+    //             }
+    //         }
+    //     divBy3(3);
+    //     divBy3(4)
 
-            squared = num*num;
-            result = squared/3;
-            if (result === 0) {
-                return console.log(true);}
-            else {
-                    return console.log(false);
-                }
+
+        //Write a function called isString that accepts a single input, and returns true of the data type is a string or false if it is not a string
+
+        function isString(userInput) {
+            if (typeof(userInput) == "string") {
+                return true;
             }
-        divBy3(3);
-        divBy3(4)
+            else {
+                return false;
+            }
+        }
+
+        console.log(isString("hello"));
+        console.log(isString(45));
+        console.log(isString("45"));
+        console.log(isString((false)));
 
     </script>
 
