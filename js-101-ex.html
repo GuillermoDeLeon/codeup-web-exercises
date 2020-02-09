@@ -27,22 +27,106 @@
     // sumAll([1,2,3,4,5]);
 
 
-    function median(nums) {
-        var avg = 0;
-        var sum = 0;
-        for (var i=0; i < nums.length; i++) {
-            sum = sum + nums[i];
-        }
-        avg = sum/nums.length;
-        return avg;
+    // function median(nums) {
+    //     var avg = 0;
+    //     var sum = 0;
+    //     for (var i=0; i < nums.length; i++) {
+    //         sum = sum + nums[i];
+    //     }
+    //     avg = sum/nums.length;
+    //     return avg;
+    // }
+    //
+    // console.log(median([1,2,3,4]));
+    // console.log(median([4,4,4,4]));
+    //
+    // var points = [40, 100, 1, 5, 25, 10];
+    // console.log(points.sort(function(a, b){return a - b}));
+
+//    62
+
+// function median(nums) {
+//     console.log(nums);
+//     console.log(nums.length);
+//     console.log(nums.length%2===1);
+//     console.log(nums[(nums.length/2) - 1]);
+//     // var medianAvg = 0;
+//     // if (nums.length % 2 === 1) {
+//     //     medianAvg = ((nums.length + 1)/2);
+//     //     return nums[medianAvg];
+//     // } else {
+//     //     var firstNum = nums[nums.length)/2];
+//     //     var secondNum = nums[(nums.length/2 + 1)];
+//     //     medianAvg = (firstNum + secondNum)/2;
+//     //     return medianAvg;
+//     //     }
+//
+//     }
+// median([1, 2, 3, 4, 5, 6]);
+
+//    63  SORT NUMBERS
+
+// function maxMinusMin(nums) {
+//     var sorted = nums.sort(function(a,b){return(a-b)});
+//     console.log(sorted);
+// }
+// maxMinusMin([10,12,8, 1, 2, 3, 4, 5, 6]);
+
+//    64
+
+    // function productOfAll(nums) {
+    //     var sum = 0;
+    //     var numsSum = 0;
+    //     for (var i = 0; i < nums.length; i++) {
+    //         console.log(nums[i]);
+    //         //      console.log (typeof(nums[i]));
+    //         // numsSum = nums[i] + sum;
+    //         // sum = numsSum;
+    //         // console.log(sum);
+    //         // }
+    //         // return console.log(numsSum);
+    //     }
+    // }
+//
+// productOfAll([2,5,9]);
+
+// function productOfAll(nums) {
+//     var numsSum = 1;
+//     for (var i = 0; i < nums.length; i++) {
+//         // console.log(nums[i]);
+//         numsSum = numsSum * nums[i];
+//     }
+//         console.log(numsSum);
+// }
+//
+// productOfAll([2,5,9]);
+
+//    67
+
+// function onlyOddNumbers(nums) {
+//     var oddArray;
+//     var x = 0;
+//     for (var i = 0; i < nums.length; i++) {
+//         if (nums[i] % 2 === 1) {
+//             oddArray[x] === nums[i];
+//             x++;
+//         }
+//     }
+//     return console.log(oddArray);
+// }
+
+    function onlyOddNumbers(nums) {
+        var oddArray = [];
+        for (var i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 === 1) {
+                oddArray.push(nums[i]);
+            }
+         }
+        return console.log(oddArray);
     }
 
-    console.log(median([1,2,3,4]));
-    console.log(median([4,4,4,4]));
 
-    var points = [40, 100, 1, 5, 25, 10];
-    console.log(points.sort(function(a, b){return a - b}));
-
+onlyOddNumbers([1, 5, 3, 2, 7]);
 </script>
 
 </body>
