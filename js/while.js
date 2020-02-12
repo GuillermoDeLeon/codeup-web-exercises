@@ -4,7 +4,7 @@
 // var i = 2;
 // while (i <= 65536) {
 //     console.log(i);
-//     i = i*2;
+//     i = i*2;  // i*-= 2;
 // }
 
 //Loops Exercise 3

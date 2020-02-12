@@ -115,18 +115,31 @@
 //     return console.log(oddArray);
 // }
 
-    function onlyOddNumbers(nums) {
-        var oddArray = [];
-        for (var i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 === 1) {
-                oddArray.push(nums[i]);
-            }
-         }
-        return console.log(oddArray);
+//     function onlyOddNumbers(nums) {
+//         var oddArray = [];
+//         for (var i = 0; i < nums.length; i++) {
+//             if (nums[i] % 2 === 1) {
+//                 oddArray.push(nums[i]);
+//             }
+//          }
+//         return console.log(oddArray);
+//     }
+//
+//
+// onlyOddNumbers([1, 5, 3, 2, 7]);
+
+//    Exercise 81
+    function shortestString(myArray) {
+        var sortedArray = myArray.sort(function(a,b){return(a-b)});
+        // return sortedArray[0];
+        return sortedArray;
     }
 
+    console.log(shortestString(["kiwi", "mango", "strawberry"]));
+    console.log(shortestString(["hello", "everybody"]));
+    console.log(shortestString(["mary", "had", "a", "little", "lamb"]));
 
-onlyOddNumbers([1, 5, 3, 2, 7]);
+
 </script>
 
 </body>
