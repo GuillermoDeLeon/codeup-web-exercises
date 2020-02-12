@@ -24,13 +24,32 @@
 // }
 
 //Loop Exercise 4
+// int i, j;
+// for(i = 1; i <= 5; i++)
+// {
+//     for(j = 1; j <= i; j++)
+//     {
+//         System.out.print(i);
+//     }
+//     System.out.print("\n");
+// }
+
 
 // for (var i=1; i < 10; i++) {
-//     console.log(i);
+//     for (var j = 1; j<i; j++) {
+//         console.log(i);
+//     }
 // }
+
+for (var i=1; i < 10; i++) {
+        var num = i.toString();
+        console.log(num.repeat(i));
+}
+
 
 //Loop Exercise 5
 
 // for (var i=100; i > 0; i-=5) {
 //     console.log(i);
 // }
+
