@@ -129,17 +129,60 @@
 // onlyOddNumbers([1, 5, 3, 2, 7]);
 
 //    Exercise 81
-    function shortestString(myArray) {
-        var sortedArray = myArray.sort(function(a,b){return(a-b)});
-        // return sortedArray[0];
-        return sortedArray;
-    }
+//     function shortestString(myArray) {
+//         var sortedArray = myArray.sort(function(a,b){return(a.length-b.length)});
+//         return sortedArray[0];
+//         // return sortedArray;
+//     }
+//
+//     console.log(shortestString(["kiwi", "mango", "strawberry"]));
+//     console.log(shortestString(["hello", "everybody"]));
+//     console.log(shortestString(["mary", "had", "a", "little", "lamb"]));
 
-    console.log(shortestString(["kiwi", "mango", "strawberry"]));
-    console.log(shortestString(["hello", "everybody"]));
-    console.log(shortestString(["mary", "had", "a", "little", "lamb"]));
+//    Exercise 83
+//     function onlyUnique(value, index, self) {
+//         if (self.indexOf(value) === index) {
+//             console.log(value);
+//         }
+//
+//     }
 
+    // function onlyUnique(value, index, self) {
+    //     if (self.indexOf(value) === index) {
+    //         console.log(value);
+    //     }
+        // return console.log(self.indexOf(value) === index);
+    // }
+    // var a = ['a', 1, 'a', 2, '1'];
+    // var a = (["b", "a", "n", "a", "n", "a", "s"]);
+    // var unique = a.filter( onlyUnique );
 
+    // onlyUnique(["b", "a", "n", "a", "n", "a", "s"]);
+
+    // getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]);
+
+function getUniqueValues(str) {
+    newString = [];
+    str = str.filter(function (x, i, a) {
+        if ((a.indexOf(x) == i) === true)
+            newString.push(str[i]);
+    });
+console.log(newString);
+}
+
+    getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]);
+    getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]);
+    getUniqueValues([
+        "mary",
+        "had",
+        "a",
+        "little",
+        "lamb",
+        "little",
+        "lamb",
+        "little",
+        "lamb"
+    ]);
 </script>
 
 </body>
