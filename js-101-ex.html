@@ -161,28 +161,93 @@
 
     // getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]);
 
-function getUniqueValues(str) {
-    newString = [];
-    str = str.filter(function (x, i, a) {
-        if ((a.indexOf(x) == i) === true)
-            newString.push(str[i]);
-    });
-console.log(newString);
-}
+// function getUniqueValues(str) {
+//     newString = [];
+//     str = str.filter(function (x, i, a) {
+//         if ((a.indexOf(x) == i) === true)
+//             newString.push(str[i]);
+//     });
+// console.log(newString);
+// }
+//
+//     getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]);
+//     getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]);
+//     getUniqueValues([
+//         "mary",
+//         "had",
+//         "a",
+//         "little",
+//         "lamb",
+//         "little",
+//         "lamb",
+//         "little",
+//         "lamb"
+//     ]);
 
-    getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]);
-    getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]);
-    getUniqueValues([
-        "mary",
-        "had",
-        "a",
-        "little",
-        "lamb",
-        "little",
-        "lamb",
-        "little",
-        "lamb"
-    ]);
+
+// function sumTwoSmallestNumbers(numbers) {
+//     sortedArray = numbers.sort(function(a, b){return a-b});
+//     sum = sortedArray[0] + sortedArray[1];
+//     return console.log(sum);
+// }
+//
+//
+//     sumTwoSmallestNumbers([5, 8, 12, 19, 22]); //, 13 , "Sum should be 13");
+//     sumTwoSmallestNumbers([15, 28, 4, 2, 43]), 6 , "Sum should be 6");
+//     sumTwoSmallestNumbers([3, 87, 45, 12, 7]), 10 , "Sum should be 10");
+//     sumTwoSmallestNumbers([23, 71, 33, 82, 1]), 24 , "Sum should be 24");
+//     sumTwoSmallestNumbers([52, 76, 14, 12, 4]), 16 , "Sum should be 16");
+
+    // function isNegative(input) {
+    //     // return Number(input) !== -(Number(input));
+    //     // console.log(isNegative(-4));
+    //     return console.log(input < 0);
+    // }
+    //
+    // isNegative(-4);
+    // isNegative(3);
+    // isNegative("3");
+
+    // function isTen(input) {
+    //     return console.log(Number(input) === 10);
+    // }
+    //
+    // isTen(10);
+    // isTen(11);
+    // isTen(-11);
+    // isTen("10");
+
+    // function double(input) {
+    //     return console.log(Math.pow(input, 2));
+    // }
+    //
+    // double(3);
+
+    // function removes(input) {
+    //     var numberArray = [];
+    //     input.forEach(function (input) {
+    //         if(input !==3) {
+    //             numberArray.push(input)
+    //         }
+    //     });
+    //     return console.log(numberArray);
+    // }
+    //
+    // removes([3,4,3,5]);
+    // removes([3,4,5,6]);
+
+    function sumAll(arr) {
+        var sum = [];
+        for (var i=0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        return console.log(sum);
+    }
+    sumAll([1,1,1]);
+    sumAll([1,2,3]);
+
+
+
 </script>
 
 </body>
