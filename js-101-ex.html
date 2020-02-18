@@ -246,17 +246,121 @@
     // sumAll([1,1,1]);
     // sumAll([1,2,3]);
 
-function stringLength(input) {
-    if (typeof input === "string") {
-        return console.log(input.length);
+// function stringLength(input) {
+//     if (typeof input === "string") {
+//         return console.log(input.length);
+//     } else {
+//         return console.log(false);
+//     }
+// }
+//
+// stringLength("string");
+// stringLength(5);
+
+
+//    Codewars compare string
+
+// function compare(str) {
+//     if (!isNaN(str)) {
+//         return console.log(false);
+//     } else {
+//         var string2 = str.toLowerCase();
+//         var arr = string2.split("");
+//     }
+//     var ctr = 0;
+//     arr.forEach(function(letter) {
+//         for (var i=0; i<string2.length; i++) {
+//             if (letter === string2[i]) {
+//                 ctr++;
+//             } else {
+//                 continue;
+//             }
+//         }
+//     });
+//     if (ctr === string2.length) {
+//         console.log(str + " is what it seems");
+//     } else {
+//         console.log(str + " is not what it seems");
+//     }
+// }
+//
+// // compare("This Is A STRing");
+// compare('iiisssi');
+// compare('abcdefghijklmnopqrstuvwxyz');
+// compare('AbcDefghIjklMnoPqrstUvwxYz');
+// // compare('343');
+// // compare(343);
+// // compare('');
+// // compare(' ');
+
+
+//----------------------from Codewars------------------
+//     function isIsogram(str){
+//         if (str === '') {
+//             return true;
+//         }
+//         if (!isNaN(str)) {
+//             return console.log(false);
+//         } else {
+//             var string2 = str.toLowerCase();
+//             var arr = string2.split("");
+//         }
+//         var ctr = 0;
+//         arr.forEach(function(letter) {
+//             for (var i=0; i<string2.length; i++) {
+//                 if (letter === string2[i]) {
+//                     ctr++;
+//                 } else {
+//                     continue;
+//                 }
+//             }
+//         });
+//         if (ctr === string2.length) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+//
+//     isIsogram("Dermatoglyphics");
+//     isIsogram("isogram");
+//     isIsogram("aba");
+//     isIsogram("moOse");
+//     isIsogram("isIsogram");
+//     isIsogram("");
+//    ----------------------end of codewars isogram-----------------------
+
+    // Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
+    // Zip returns a new array of arrays where each element is an array of the two elements at the same index
+    // Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])
+    // Example: zip(["a", "b", "c"], ["x", "y", "z"]) returns [["a", "x"], ["b", "y"], ["c", "z"]]
+
+//    got similar solution from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections - section multi-dimensional arrays
+
+function zip(arr1, arr2) {
+    var arr3 = new Array(arr1.length);
+
+    if (arr1.length !== arr2.length) {
+        console.log("Sorry these arrays are not the same length.");
     } else {
-        return console.log(false);
+        var j=0;
+        for (var i=0; i < arr1.length; i++) {
+            arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
+            arr3[i] = arr1[i] + ', ' + arr2[j] + ']';
+            j++;
+        }
+        console.log(arr3);
     }
 }
 
-stringLength("string");
-stringLength(5);
 
+
+
+
+
+zip([1,2,3,4], ["a","b","c"]);
+zip([1,2,3,5], ["a","b","c","d"]);
+zip(["red","blue","green"],["banana","apple","orange"]);
 
 </script>
 
