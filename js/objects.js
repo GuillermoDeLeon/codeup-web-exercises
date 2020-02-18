@@ -12,26 +12,7 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-//     var person = {
-//             firstName: "Guillermo",
-//             lastName:  "De Leon"
-//     };
-//
-//     /**
-//      * TODO:
-//      * Add a sayHello method to the person object that returns a greeting using
-//      * the firstName and lastName properties.
-//      * console.log the returned message to check your work
-//      *
-//      * Example
-//      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
-//      */
-//
-//     person.sayHello = function () {
-//         console.log("Hello " + this.firstName + " " + this.lastName);
-//     };
-//
-// person.sayHello();
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -52,22 +33,7 @@
     //     {name: 'Ryan', amount: 250},
     //     {name: 'George', amount: 320}
     // ];
-    //
-    // shoppers.forEach(function(shopper) {
-    //     if (shopper.amount > 200) {
-    //         var discount = (.12 * shopper.amount);
-    //         var totalAfterDiscount = shopper.amount - discount;
-    //         return console.log(shopper.name + " spent $" + shopper.amount + "." + " Qualifies for a 12 percent discount of $" + discount + ". Total after discount is $"  + totalAfterDiscount);
-    //     } else {
-    //         return console.log(shopper.name + " spent $" + shopper.amount + "." + " Did not qualify for a discount.");
-    //     }
-    //     // console.log(shopper.name);
-    //     // console.log(shopper.amount);
-    // });
 
-    // console.log(shoppers[0].name + " and " + shoppers[0].amount);
-    // console.log(shoppers[1].name + " and " + shoppers[1].amount);
-    // console.log(shoppers[2].name + " and " + shoppers[2].amount);
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -81,49 +47,6 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
-    var books = [
-        {
-            title: "The Never Ending Javascript",
-            author: {
-                firstName: "Arthur",
-                lastName: "Miller"
-            },
-        },
-        {
-            title: "Oasis of CSS",
-            author: {
-                firstName: "Johnny",
-                lastName: "Badd"
-            },
-        },
-        {
-            title: "No Regrets, No Surrender",
-            author: {
-                firstName: "Sarah",
-                lastName: "Miller"
-            },
-        },
-        {
-            title: "Raging in Peace",
-            author: {
-                firstName: "Reese",
-                lastName: "Witherspoon"
-            },
-        },
-        {
-            title: "Suffering in Silence",
-            author: {
-                firstName: "Reilly",
-                lastName: "Smith"
-            },
-        }
-
-];
-
-    // console.log(books[0].title) // "The Salmon of Doubt"
-    // console.log(books[0].author.firstName) // "Douglas"
-    // console.log(books[0].author.lastName) // "Adams"
 
 
     /**
@@ -151,14 +74,6 @@
      *      ...
      */
 
-    var ctr=1
-    for (var i=0; i < books.length; i++ ) {
-
-        console.log("Book # " + ctr );
-        console.log("Title: " + books[i].title);
-        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-        ctr++;
-    }
 
     /**
      * Bonus:
