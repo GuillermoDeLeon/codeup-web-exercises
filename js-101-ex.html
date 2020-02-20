@@ -337,30 +337,197 @@
 
 //    got similar solution from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections - section multi-dimensional arrays
 
-function zip(arr1, arr2) {
-    var arr3 = new Array(arr1.length);
+// function zip(arr1, arr2) {
+//     var arr3 = new Array(arr1.length);
+//
+//     if (arr1.length !== arr2.length) {
+//         console.log("Sorry these arrays are not the same length.");
+//     } else {
+//         var j=0;
+//         for (var i=0; i < arr1.length; i++) {
+//             arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
+//             arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
+//             j++;
+//         }
+//         console.log(arr3);
+//     }
+// }
+//
+//
+//
+//
+//
+//
+// zip([1,2,3,4], ["a","b","c"]);
+// zip([1,2,3,5], ["a","b","c","d"]);
+// zip(["red","blue","green"],["banana","apple","orange"]);
 
-    if (arr1.length !== arr2.length) {
-        console.log("Sorry these arrays are not the same length.");
-    } else {
-        var j=0;
-        for (var i=0; i < arr1.length; i++) {
-            arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
-            arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
-            j++;
+//    exercise 94 and 95
+
+    // const books = [
+    //     {
+    //         title: "Genetic Algorithms and Machine Learning for Programmers",
+    //         price: 36.99,
+    //         author: "Frances Buontempo"
+    //     },
+    //     {
+    //         title: "The Visual Display of Quantitative Information",
+    //         price: 38.0,
+    //         author: "Edward Tufte"
+    //     },
+    //     {
+    //         title: "Practical Object-Oriented Design",
+    //         author: "Sandi Metz",
+    //         price: 30.47
+    //     },
+    //     {
+    //         title: "Weapons of Math Destruction",
+    //         author: "Cathy O'Neil",
+    //         price: 17.44
+    //     }
+    // ];
+
+    // function highestPriceBook(input) {
+    //     var comparePrice = 0;
+    //     var element;
+    //     for (var i=0; i < input.length; i++) {
+    //         if (input[i].price > comparePrice) {
+    //             comparePrice = input[i].price;
+    //             element = i;
+    //         } else {
+    //             continue;
+    //         }
+    //     }
+    //     return console.log(input[element]);
+    // }
+    //
+    // highestPriceBook(books);
+
+    // function lowestPriceBooks(input) {
+    //     var comparePrice = input[0].price;
+    //     var element = 0;
+    //     for (var i=0; i < input.length; i++) {
+    //         if (comparePrice >= input[i].price) {
+    //             comparePrice = input[i].price;
+    //             element = i;
+    //         } else {
+    //             continue;
+    //         }
+    //     }
+    //     return console.log(input[element]);
+    // }
+
+    // function lowestPriceBooks(input) {
+    //     var comparePrice = input[0].price;
+    //     var element = 0;
+    //     for (var i=0; i < input.length; i++) {
+    //         if (input[i].price <= comparePrice) {
+    //             comparePrice = input[i].price;
+    //             element = i;
+    //          } //else {
+    //         //     continue;
+    //         // }
+    //     }
+    //     return input[element];
+    // }
+    //
+    // console.log(lowestPriceBooks(books));
+
+    // const shoppingCart = {
+    //     tax: 0.08,
+    //     items: [
+    //         {
+    //             title: "orange juice",
+    //             price: 3.99,
+    //             quantity: 1
+    //         },
+    //         {
+    //             title: "rice",
+    //             price: 1.99,
+    //             quantity: 3
+    //         },
+    //         {
+    //             title: "beans",
+    //             price: 0.99,
+    //             quantity: 3
+    //         },
+    //         {
+    //             title: "chili sauce",
+    //             price: 2.99,
+    //             quantity: 1
+    //         },
+    //         {
+    //             title: "chocolate",
+    //             price: 0.75,
+    //             quantity: 9
+    //         }
+    //     ]
+    // };
+    //
+    // console.log(shoppingCart.items.length);
+
+    const shoppingCart = {
+        tax: 0.08,
+        items: [
+            {
+                title: "orange juice",
+                price: 3.99,
+                quantity: 1
+            },
+            {
+                title: "rice",
+                price: 1.99,
+                quantity: 3
+            },
+            {
+                title: "beans",
+                price: 0.99,
+                quantity: 3
+            },
+            {
+                title: "chili sauce",
+                price: 2.99,
+                quantity: 1
+            },
+            {
+                title: "chocolate",
+                price: 0.75,
+                quantity: 9
+            }
+        ]
+    };
+
+    function mostSpentOnItem(input) {
+        var current = 0;
+        var highest = 0;
+        var element = 0;
+        for (var i=0; i < input.items.length; i++) {
+            current = (input.items[i].price * input.items[i].quantity);
+            if (current > highest) {
+                highest = current;
+                console.log(highest);
+                element = i;
+                console.log(element);
+            } else {
+                continue;
+            }
         }
-        console.log(arr3);
+        return input.items[element];
     }
-}
+    console.log(mostSpentOnItem(shoppingCart));
 
+    // function getAverageSpentPerItem(input) {
+    //     var totalSum = 0;
+    //     var totalQty = 0;
+    //     for (var i=0; i < input.items.length; i++) {
+    //         console.log(input.items[i].price, input.items[i].quantity);
+    //         totalSum = totalSum + (input.items[i].price * input.items[i].quantity);
+    //         totalQty = totalQty + input.items[i].quantity;
+    //         }
+    //     return console.log(totalSum/totalQty);
+    // }
 
-
-
-
-
-zip([1,2,3,4], ["a","b","c"]);
-zip([1,2,3,5], ["a","b","c","d"]);
-zip(["red","blue","green"],["banana","apple","orange"]);
+    // ;getAverageSpentPerItem(shoppingCart)
 
 </script>
 
