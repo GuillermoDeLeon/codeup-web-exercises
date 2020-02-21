@@ -295,39 +295,39 @@
 
 
 //----------------------from Codewars------------------
-//     function isIsogram(str){
-//         if (str === '') {
-//             return true;
-//         }
-//         if (!isNaN(str)) {
-//             return console.log(false);
-//         } else {
-//             var string2 = str.toLowerCase();
-//             var arr = string2.split("");
-//         }
-//         var ctr = 0;
-//         arr.forEach(function(letter) {
-//             for (var i=0; i<string2.length; i++) {
-//                 if (letter === string2[i]) {
-//                     ctr++;
-//                 } else {
-//                     continue;
-//                 }
-//             }
-//         });
-//         if (ctr === string2.length) {
-//             return true;
-//         } else {
-//             return false;
-//         }
-//     }
-//
-//     isIsogram("Dermatoglyphics");
-//     isIsogram("isogram");
-//     isIsogram("aba");
-//     isIsogram("moOse");
-//     isIsogram("isIsogram");
-//     isIsogram("");
+    function isIsogram(str){
+        if (str === '') {
+            return true;
+        }
+        if (!isNaN(str)) {
+            return console.log(false);
+        } else {
+            var string2 = str.toLowerCase();
+            var arr = string2.split("");
+        }
+        var ctr = 0;
+        arr.forEach(function(letter) {
+            for (var i=0; i<string2.length; i++) {
+                if (letter === string2[i]) {
+                    ctr++;
+                } else {
+                    continue;
+                }
+            }
+        });
+        if (ctr === string2.length) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    isIsogram("Dermatoglyphics");
+    isIsogram("isogram");
+    isIsogram("aba");
+    isIsogram("moOse");
+    isIsogram("isIsogram");
+    isIsogram("");
 //    ----------------------end of codewars isogram-----------------------
 
     // Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
@@ -337,30 +337,28 @@
 
 //    got similar solution from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections - section multi-dimensional arrays
 
-// function zip(arr1, arr2) {
-//     var arr3 = new Array(arr1.length);
-//
-//     if (arr1.length !== arr2.length) {
-//         console.log("Sorry these arrays are not the same length.");
-//     } else {
-//         var j=0;
-//         for (var i=0; i < arr1.length; i++) {
-//             arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
-//             arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
-//             j++;
-//         }
-//         console.log(arr3);
-//     }
-// }
-//
-//
-//
-//
-//
-//
-// zip([1,2,3,4], ["a","b","c"]);
-// zip([1,2,3,5], ["a","b","c","d"]);
-// zip(["red","blue","green"],["banana","apple","orange"]);
+function zip(arr1, arr2) {
+    var arr3 = [];
+    // var arr3 = new Array(arr1.length);
+
+    if (arr1.length !== arr2.length) {
+        console.log("Sorry these arrays are not the same length.");
+    } else {
+        var j=0;
+        for (var i=0; i < arr1.length; i++) {
+            arr3[i] = [arr1[i], arr2[j]];
+            // arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
+            j++;
+        }
+        console.log(arr3);
+    }
+}
+
+zip(['moe','larry','curly'], ['a','b','c','d']);
+zip(['moe','larry','curly'], ['a','b','c']);
+zip([1,2,3,4], ["a","b","c"]);
+zip([1,2,3,5], ["a","b","c","d"]);
+zip(["red","blue","green"],["banana","apple","orange"]);
 
 //    exercise 94 and 95
 
@@ -466,55 +464,55 @@
     //
     // console.log(shoppingCart.items.length);
 
-    const shoppingCart = {
-        tax: 0.08,
-        items: [
-            {
-                title: "orange juice",
-                price: 3.99,
-                quantity: 1
-            },
-            {
-                title: "rice",
-                price: 1.99,
-                quantity: 3
-            },
-            {
-                title: "beans",
-                price: 0.99,
-                quantity: 3
-            },
-            {
-                title: "chili sauce",
-                price: 2.99,
-                quantity: 1
-            },
-            {
-                title: "chocolate",
-                price: 0.75,
-                quantity: 9
-            }
-        ]
-    };
+    // const shoppingCart = {
+    //     tax: 0.08,
+    //     items: [
+    //         {
+    //             title: "orange juice",
+    //             price: 3.99,
+    //             quantity: 1
+    //         },
+    //         {
+    //             title: "rice",
+    //             price: 1.99,
+    //             quantity: 3
+    //         },
+    //         {
+    //             title: "beans",
+    //             price: 0.99,
+    //             quantity: 3
+    //         },
+    //         {
+    //             title: "chili sauce",
+    //             price: 2.99,
+    //             quantity: 1
+    //         },
+    //         {
+    //             title: "chocolate",
+    //             price: 0.75,
+    //             quantity: 9
+    //         }
+    //     ]
+    // };
 
-    function mostSpentOnItem(input) {
-        var current = 0;
-        var highest = 0;
-        var element = 0;
-        for (var i=0; i < input.items.length; i++) {
-            current = (input.items[i].price * input.items[i].quantity);
-            if (current > highest) {
-                highest = current;
-                console.log(highest);
-                element = i;
-                console.log(element);
-            } else {
-                continue;
-            }
-        }
-        return input.items[element];
-    }
-    console.log(mostSpentOnItem(shoppingCart));
+    // function mostSpentOnItem(input) {
+    //     var current = 0;
+    //     var highest = 0;
+    //     var element = 0;
+    //     for (var i=0; i < input.items.length; i++) {
+    //         current = (input.items[i].price * input.items[i].quantity);
+    //         if (current > highest) {
+    //             highest = current;
+    //             console.log(highest);
+    //             element = i;
+    //             console.log(element);
+    //         } else {
+    //             continue;
+    //         }
+    //     }
+    //     return input.items[element];
+    // }
+    // console.log(mostSpentOnItem(shoppingCart));
 
     // function getAverageSpentPerItem(input) {
     //     var totalSum = 0;
