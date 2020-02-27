@@ -2,12 +2,33 @@
 
 $(document).ready(function() {
 
-    alert($('h1').html());
-// alert('this page is loading, from js file')
-    // INSERT JAVASCRIPT CODE SAMPLE HERE
-    $('#div1').css('background-color', '#FF0');
-    $('#div2').css('background-color', 'blue');
+//     alert($('h1').html());
+// // alert('this page is loading, from js file')
+//     // INSERT JAVASCRIPT CODE SAMPLE HERE
+//     $('#div1').css('background-color', '#FF0');
+//     $('#div2').css('background-color', 'blue');
+//
+//     alert($('h4').html());
 
-    alert($('h4').html());
+    // $('#paragraph1').dblclick(function(e) {
+    //     font-size: 18px;
+    // });
+
+    $('h1').click(function() {
+        $(this).css('background-color', 'yellow');
+    });
+
+    $('p').click(function() {
+        $(this).css('font-size', '28px');
+    });
+
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', '#000');
+        }
+    );
 
 });
