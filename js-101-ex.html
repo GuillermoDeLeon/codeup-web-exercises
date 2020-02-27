@@ -322,12 +322,12 @@
         }
     }
 
-    isIsogram("Dermatoglyphics");
-    isIsogram("isogram");
-    isIsogram("aba");
-    isIsogram("moOse");
-    isIsogram("isIsogram");
-    isIsogram("");
+    // isIsogram("Dermatoglyphics");
+    // isIsogram("isogram");
+    // isIsogram("aba");
+    // isIsogram("moOse");
+    // isIsogram("isIsogram");
+    // isIsogram("");
 //    ----------------------end of codewars isogram-----------------------
 
     // Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
@@ -354,11 +354,11 @@ function zip(arr1, arr2) {
     }
 }
 
-zip(['moe','larry','curly'], ['a','b','c','d']);
-zip(['moe','larry','curly'], ['a','b','c']);
-zip([1,2,3,4], ["a","b","c"]);
-zip([1,2,3,5], ["a","b","c","d"]);
-zip(["red","blue","green"],["banana","apple","orange"]);
+// zip(['moe','larry','curly'], ['a','b','c','d']);
+// zip(['moe','larry','curly'], ['a','b','c']);
+// zip([1,2,3,4], ["a","b","c"]);
+// zip([1,2,3,5], ["a","b","c","d"]);
+// zip(["red","blue","green"],["banana","apple","orange"]);
 
 //    exercise 94 and 95
 
@@ -526,6 +526,44 @@ zip(["red","blue","green"],["banana","apple","orange"]);
     // }
 
     // ;getAverageSpentPerItem(shoppingCart)
+
+    // function convertNameToObject(string) {
+    //     // var bucket = [];
+    //     // var nameObject = {};
+    //     //
+    //     // bucket.push(string.split());
+    //     //
+    //     // var nameObject = {
+    //     //     firstName: bucket[i],
+    //     //     lastName: bucket[i + 1]
+    //     // };
+    //
+    //     var bucket = [];
+    //     bucket.push(string.split(' '));
+    //
+    //
+    //     return console.log(bucket);
+    //
+    // }
+
+    function convertNameToObject(str) {
+        str = str.split(" ");
+        var nameObject = {};
+        // nameObject.firstName
+        // nameObject.lastName
+
+        for (var i = 0, x = str.length; i < x; i++) {
+            // str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+            nameObject.firstName = str[i];
+            // nameObject.lastName = str[i];
+            // console.log(nameObject.firstName);
+
+        }
+        return console.log(nameObject.firstName);
+    }
+
+    convertNameToObject('harry potter'); // {firstName: 'Harry', lastName: 'Potter'}
+    convertNameToObject('Ron Weasley');
 
 </script>
 
