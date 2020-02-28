@@ -18,16 +18,24 @@ $(document).ready(function() {
         $(this).css('background-color', 'yellow');
     });
 
-    $('p').click(function() {
-        $(this).css('font-size', '28px');
+    $('p').dblclick(function() {
+        $('p').css('font-size', '28px');
     });
 
-    $('li').hover(
-        function() {
-            $(this).css('color', 'red');
+    // $('li').hover(
+    //     function() {
+    //         $(this).css('color', 'red');
+    //     },
+    //     function() {
+    //         $(this).css('color', '#000');
+    //     }
+    // );
+
+    $('li').hover(function() {
+            $('li').css('color', 'red');
         },
         function() {
-            $(this).css('color', '#000');
+            $('li').css('color', '#000');
         }
     );
 

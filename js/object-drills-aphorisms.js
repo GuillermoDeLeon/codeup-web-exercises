@@ -292,7 +292,10 @@ function formatQuote(input) {
 console.log(formatQuote(aphorisms[5]));
 
 //TODO: Write a function named getRandomQuote, that accepts the aphorisms array, and returns a string that contains a random quote and author in the format "quote" + "-author".
-
+function getRandomQuote(inputArray) {
+	var quoteNum = Math.floor(Math.random() * (inputArray-1));
+	return console.log(formatQuote(inputArray[quoteNum]));
+}
 
 //TODO: Write a function named fiveRandomQuotes, that accepts the aphorisms array and returns an array of five random quotes and authors in the format "quote" + "-author".
 
