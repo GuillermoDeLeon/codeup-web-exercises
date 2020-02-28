@@ -295,32 +295,32 @@
 
 
 //----------------------from Codewars------------------
-    function isIsogram(str){
-        if (str === '') {
-            return true;
-        }
-        if (!isNaN(str)) {
-            return console.log(false);
-        } else {
-            var string2 = str.toLowerCase();
-            var arr = string2.split("");
-        }
-        var ctr = 0;
-        arr.forEach(function(letter) {
-            for (var i=0; i<string2.length; i++) {
-                if (letter === string2[i]) {
-                    ctr++;
-                } else {
-                    continue;
-                }
-            }
-        });
-        if (ctr === string2.length) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+//     function isIsogram(str){
+//         if (str === '') {
+//             return true;
+//         }
+//         if (!isNaN(str)) {
+//             return console.log(false);
+//         } else {
+//             var string2 = str.toLowerCase();
+//             var arr = string2.split("");
+//         }
+//         var ctr = 0;
+//         arr.forEach(function(letter) {
+//             for (var i=0; i<string2.length; i++) {
+//                 if (letter === string2[i]) {
+//                     ctr++;
+//                 } else {
+//                     continue;
+//                 }
+//             }
+//         });
+//         if (ctr === string2.length) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
 
     // isIsogram("Dermatoglyphics");
     // isIsogram("isogram");
@@ -337,22 +337,22 @@
 
 //    got similar solution from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections - section multi-dimensional arrays
 
-function zip(arr1, arr2) {
-    var arr3 = [];
-    // var arr3 = new Array(arr1.length);
-
-    if (arr1.length !== arr2.length) {
-        console.log("Sorry these arrays are not the same length.");
-    } else {
-        var j=0;
-        for (var i=0; i < arr1.length; i++) {
-            arr3[i] = [arr1[i], arr2[j]];
-            // arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
-            j++;
-        }
-        console.log(arr3);
-    }
-}
+// function zip(arr1, arr2) {
+//     var arr3 = [];
+//     // var arr3 = new Array(arr1.length);
+//
+//     if (arr1.length !== arr2.length) {
+//         console.log("Sorry these arrays are not the same length.");
+//     } else {
+//         var j=0;
+//         for (var i=0; i < arr1.length; i++) {
+//             arr3[i] = [arr1[i], arr2[j]];
+//             // arr3[i] = '[' + arr1[i] + ', ' + arr2[j] + ']';
+//             j++;
+//         }
+//         console.log(arr3);
+//     }
+// }
 
 // zip(['moe','larry','curly'], ['a','b','c','d']);
 // zip(['moe','larry','curly'], ['a','b','c']);
@@ -546,24 +546,35 @@ function zip(arr1, arr2) {
     //
     // }
 
-    function convertNameToObject(str) {
-        str = str.split(" ");
-        var nameObject = {};
-        // nameObject.firstName
-        // nameObject.lastName
+    // function convertNameToObject(str) {
+    //     str = str.split(" ");
+    //     var nameObject = {};
+    //     // nameObject.firstName
+    //     // nameObject.lastName
+    //
+    //     for (var i = 0, x = str.length; i < x; i++) {
+    //         // str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    //         nameObject.firstName = str[i];
+    //         // nameObject.lastName = str[i];
+    //         // console.log(nameObject.firstName);
+    //
+    //     }
+    //     return console.log(nameObject.firstName);
+    // }
+    //
+    // convertNameToObject('harry potter'); // {firstName: 'Harry', lastName: 'Potter'}
+    // convertNameToObject('Ron Weasley');
+var arr1 = ['enter'];
+    var arr2 = ['enter'];
+//     var kcodeArr = ['u','u','d','d','l','r','l','r','b','a','enter'];
 
-        for (var i = 0, x = str.length; i < x; i++) {
-            // str[i] = str[i][0].toUpperCase() + str[i].substr(1);
-            nameObject.firstName = str[i];
-            // nameObject.lastName = str[i];
-            // console.log(nameObject.firstName);
 
-        }
-        return console.log(nameObject.firstName);
+    if (arr1.join(',') === arr2.join(' ')) {
+        console.log(arr1[3]);
+    } else {
+        console.log(false)
     }
 
-    convertNameToObject('harry potter'); // {firstName: 'Harry', lastName: 'Potter'}
-    convertNameToObject('Ron Weasley');
 
 </script>
 
