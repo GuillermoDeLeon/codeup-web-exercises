@@ -80,16 +80,16 @@ function rainbowLogo() {
     var i = 0;
 
     text.split('').forEach(function(letter) {
-        colorfulText[i] = '<span class="' + colors[counter] + '">' + letter + '</span>';
+        colorfulText.push( = '<span class="' + colors[counter] + '">' + letter + '</span>');
         if(counter === 5) {
             counter = 0;
         }
-        counter++; i++;
+        counter++;
     });
     text = colorfulText.join(' ');
-    console.log(text);
+    // console.log(text);
 
-    $('#colorText').removeClass(getColorText()).html(text);
+    return $('#colorText').removeClass(getColorText()).html(text);
 }
 
 console.log(rainbowLogo());
@@ -100,7 +100,7 @@ console.log(rainbowLogo());
 var circleClickCount = 0;
 
 // Add a click listener to each of the 'circle' elements at the botto of the page, and make each color circle
-$('.circles').click(function() {
+$('.circle').click(function() {
     var clickedColor = $(this).attr('id');
 
     circleClickCount++;
@@ -143,9 +143,14 @@ $('.circles').click(function() {
 // .each()   .first()    .last()    .children()    .parent()    .next()
 
 // TODO: Let's give each of the selection circles a 1px black border
+$('.circle').each(function(index) {
+    console.log("added border to circle" + index);
+    return $(this).css('border', '1px solid black');
+});
 
 
 // TODO: Let's take the border away from the first circle
+$('.circle').first
 
 
 // TODO: Let's make the last circle disappear
@@ -155,9 +160,12 @@ $('.circles').click(function() {
 
 
 // TODO: while changing the fist path element to have a black fill, give its grandparent a light gray background and 10px padding
-
+$('#path1').removeClass().addClass('black').parent().parent().css({'background': 'lightgray', 'margin': '20px'
+});
 
 // TODO: change the second path element to blue, then change the 'next' element to yellow
+$('#path2').removeClass().addClass('blue').next().removeClass().addClass('yellow');
+)
 
 
 // TODO: What's the difference between changing the class to change the color, and simply changing the color directly?

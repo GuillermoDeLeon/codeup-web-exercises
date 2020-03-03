@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-<button type="button">Click to toggle details</button>
+<button id="park-description" type="button">Click to toggle details</button>
 <dl>
     <dt>Yellowstone</dt>
     <dd class="invisible">Even if Yellowstone didn't hold the incredible distinction of being the world's first national park, the 2.2 million-acre park could easily stand on its own for its unique natural attractions and diverse geography. Here, travelers can get lost in the splendor of Yellowstone's many lakes, mountains, buffalo-filled valleys and, of course, its unmatched geysers and hot springs. To avoid the crowds that often plague the park, plan to visit in April, May, September or October.</dd>
@@ -36,19 +36,60 @@
     <dt>Hawai'i Volcanoes National Park</dt>
     <dd class="invisible">Visit this park for a chance to get up close and personal with two of the world's most active volcanoes, Mauna Loa and Kilauea. The latter continually erupts, which visitors can witness from multiple points in the park, including the famous Chain of Craters Road. Along the drive, set aside time to stop at the Kealakomo Overlook. The scenic lookout offers expansive views of the Pacific Ocean and the ancient village of Kealakomo.</dd>
 </dl>
+<button id="last-li-item" type="submit">Select last list item of each heading</button>
+
+<h3 id="national-parks-heading">National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<h3>Local Parks of Texas</h3>
+<ul id="local-parks">
+    <li>Travis</li>
+    <li>Brackenridge</li>
+    <li>Hardberger Park</li>
+    <li>Hemisfair Park</li>
+</ul>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     $(document).ready(function() {
         // $('.invisible').css('visibility','hidden');
 
-        $('button').click(function(event) {
+        $('#park-description').click(function() {
             $('dd').toggleClass('invisible');
         });
 
-        $('dt').click(function(event) {
+        $('dt').click(function() {
             $(this).css('background-color', 'yellow');
         });
+//When you click on button it will high light the last item in each section to a yellow background
+        $('#last-li-item').click(function() {
+            $('ul').each(function() {
+                $(this).children().last().css('background-color', 'yellow');
+            });
+        });
+//add bold text to li items when h3 heading is clicked
+        $('h3').click(function() {
+            $('li').css('font-weight','bold');
+        });
+//when any list item is clicked, the text of first list item under each main heading turns blue
+        $('li').click(function() {
+            $('ul').each(function() {
+                $(this).children().first().css('color', 'blue');
+            });
+        })
     });
 
 </script>
