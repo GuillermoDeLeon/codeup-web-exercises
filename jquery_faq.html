@@ -13,6 +13,13 @@
     </style>
 </head>
 <body>
+
+<div id="top-h1">
+    <h1>Want to sign up for our newsletter?  <span id="newsletter-span">X</span></h1>
+</div>
+<div>
+    <h2>Take a chance with us.  Register for this site.</h2>
+</div>
 <button id="park-description" type="button">Click to toggle details</button>
 <dl>
     <dt>Yellowstone</dt>
@@ -89,8 +96,26 @@
             $('ul').each(function() {
                 $(this).children().first().css('color', 'blue');
             });
-        })
+        });
+        //When the letter X is clicked hide the div containing the h1 element at the top of page
+        $('#newsletter-span').click(function() {
+            $('#top-h1').hide();
+        });
+        //    start off hiding all UL items under each H3, then each H3 will fade in after each H3 heading is clicked
+        $('li').hide();
+
+        $('h3').click(function () {
+            $('ul').each(function() {
+                $('li').toggle();
+            });
+        });
+
+        $('h2').hide();
+
+        $('h2').hide().delay(8000).fadeIn();
+
     });
+
 
 </script>
 </body>
