@@ -8,13 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+
 <div id="posts">
 
+<h1>Test</h1>
 </div>
 
-<script src="js/jquery-2.2.4.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 
 <script>
+$(document).ready(function() {
+    // alert( 'The DOM has finished loading!' );
+
     (function() {
         "use strict";
 
@@ -23,7 +28,34 @@
             console.log(data);
         });
 
+        // $.ajax("data/blog.json").done(function (data) {
+        //     $('#posts').append('<h2>' + data[0].title + '</h2>');
+        // });
+        //
+        // $.ajax("data/blog.json").done(function(data) {
+        //     $('#posts').append('<h3>' + data[0].content + '</h3>');
+        // });
+        //
+        // $.ajax("data/blog.json").done(function (data) {
+        //     $('#posts').append('<h2>' + data[1].title + '</h2>');
+        // });
+        //
+        // $.ajax("data/blog.json").done(function (data) {
+        //     $('#posts').append('<h3>' + data[1].content + '</h3>');
+        // })
+
+        $.ajax('data/blog.json').done(function(data) {
+            for (var i = 0; i < data.length; i++) {
+                $('#posts').append('<h2>' + data[i].title + '</h2>');
+                $('#posts').append('<h3>' + data[i].content + '</h3>');
+                $('#posts').append('<h4>' + 'Categories:  ' + data[i].categories + '</h4>');
+                $('#posts').append('<h4>' + 'Date:  ' + data[i].date + '</h4>');
+            }
+        });
+
     })();
+
+}); // end of document.ready function.
 
 </script>
 
