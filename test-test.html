@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Weather!</h1>
+<!--<div>Enter new location using latitude and longitude-->
+<!--    <button -->
+
+</div>
+<div id="weather-right-now">
+    <!--San antonio coordinates-->
+    <!--    latitude-->
+    <!--    29.424349-->
+    <!--    longitude-->
+    <!--    -98.491142-->
+
+    <!--    alcatrazz lat  37.8267,   long -122.4233-->
+<!--    <form>-->
+<!--        <label for="long">Longitude:</label>-->
+<!--        <input type="text" name="long" id="long" placeholder="Enter the longitude here">-->
+<!--        <label for="lat">Latitude:</label>-->
+<!--        <input type="lat" name="lat" id="lat" placeholder="Enter latitude here">-->
+<!--        <button type="submit">Submit Coordinates</button>-->
+<!--    </form>-->
+
+    <form>
+        <label for="long">Longitude:</label>
+        <input type="text" name="long" id="long" placeholder="Enter the longitude here">
+        <label for="lat">Latitude:</label>
+        <input type="lat" name="lat" id="lat" placeholder="Enter latitude here">
+        <button type="submit">Submit Coordinates</button>
+    </form>
+
+    <h2>Current Weather in <span class="city"></span></h2>
+</div>
+<div id="weather-forecast">
+    <h3>Forecast</h3>
+</div>
+
+<script src="js/keys.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    $('#form').submit(function(){
+        $.ajax({
+            url: $('#form').attr('action'),
+            type: 'POST',
+            data : $('#form').serialize(),
+            success: function(){
+                console.log('form submitted.');
+            }
+        });
+        return false;
+    });
+
+    // var lati = 29.424;
+    // var longi = -98.4936;
+    var lati = $('button').click(function() {
+        $('#lat').html()
+    });
+    var longi = $('button').click(function() {
+        $('#long').html()
+    });
+    console.log(lati);
+    $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+ darkSkyKey +"/"+ lati +"," + longi).done(function (data) {
+        // $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+ darkSkyKey +"/29.424349,-98.491142").done(function (data) {
+        console.log(data);
+        console.log(new Date(data.currently.time * 1000));
+
+
+    });
+</script>
+</body>
+</html>
