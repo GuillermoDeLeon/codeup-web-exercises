@@ -13,18 +13,17 @@
             height: 500px;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 <body>
-<h1>3 Day Weather Forecast</h1>
 
-<div id="weather-right-now">
+<h2 class="city text-center"></h2>
+<div class="text-center" id="weather-right-now"></div>
+<h1 class="text-center">3 Day Weather Forecast</h1>
 
-    <h2>Current Weather in <span class="city"></span></h2>
-</div>
+<div id="weather-forecast" class="d-inline-flex m-3 align-content-lg-between">
 
-<div id="weather-forecast">
-    <h3>Forecast</h3>
 </div>
 
 <div id='map'></div>
@@ -51,17 +50,7 @@
 
 mapboxgl.accessToken = mapboxToken;
 
-// var map = new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/mapbox/streets-v9',
-//     zoom:10,
-//     center:[-98.519393, 29.527616]
-// });
-//
-// var marker = new mapboxgl.Marker()
-//     .setLngLat([-98.519393, 29.527616])
-//     .addTo(map);
-
+// initialize load of map to San Antonio
 getWeather(29.433468,-98.499370);
 
 
@@ -83,34 +72,34 @@ function getWeather(lati, longi) {
             console.log(new Date(data.currently.time * 1000));
 
             // Display the current "real time" temperature information to the weather-details div
-            $('#weather-right-now').append('<p>' + "Temperature:  " + data.currently.temperature + '<br>' +
-                "Current Weather:  " + data.currently.summary + '<br>' +
-                "Humidity:  " + data.currently.humidity + '<br>' +
+            $('#weather-right-now').html('<p>' + "Current Weather:  " + data.currently.summary + '<br>' +
+                "Temperature:  " + data.currently.temperature + "  " +
+                "Humidity:  " + data.currently.humidity + "  " +
                 "Pressure:  " + data.currently.pressure + '<br>' +
 
                 "Current Time: " + new Date(data.currently.time * 1000) + '</p>');
 
             // Display the current city by timezone label to the first h2 in body
-            $('.city').append(" " + data.timezone);
+            $('.city').html("Current weather in " + data.timezone);
 
             //    Display forecast for today
-            $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[0].summary + '<br>' +
-                "Temperature Low:  " + data.daily.data[0].temperatureLow + '<br>' +
-                "Temperature High: " + data.daily.data[0].temperatureHigh + '<br>' +
+            $('#weather-forecast').html('<p>' + "Summary:  " + data.daily.data[0].summary + '<br>' +
+                "Temperature Low:  " + data.daily.data[0].temperatureLow + "  " +
+                "High: " + data.daily.data[0].temperatureHigh + '<br>' +
                 "Humidity:  " + data.daily.data[0].humidity + '<br>' +
                 "Pressure:  " + data.daily.data[0].pressure + '</p>');
 
             // Display forecast for tomorrow
             $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[1].summary + '<br>' +
-                "Temperature Low:  " + data.daily.data[1].temperatureLow + '<br>' +
-                "Temperature High: " + data.daily.data[1].temperatureHigh + '<br>' +
+                "Temperature Low:  " + data.daily.data[1].temperatureLow + "  " +
+                "High: " + data.daily.data[1].temperatureHigh + '<br>' +
                 "Humidity:  " + data.daily.data[1].humidity + '<br>' +
                 "Pressure:  " + data.daily.data[1].pressure + '</p>');
 
             // Display forecast for day after tomorrow
             $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[2].summary + '<br>' +
-                "Temperature Low:  " + data.daily.data[2].temperatureLow + '<br>' +
-                "Temperature High: " + data.daily.data[2].temperatureHigh + '<br>' +
+                "Temperature Low:  " + data.daily.data[2].temperatureLow + "  " +
+                "High: " + data.daily.data[2].temperatureHigh + '<br>' +
                 "Humidity:  " + data.daily.data[2].humidity + '<br>' +
                 "Pressure:  " + data.daily.data[2].pressure + '</p>');
         });
