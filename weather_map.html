@@ -2,123 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Weather Map</title>
 
     <!--    Mapbox CSS-->
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         #map {
             /* the width and height may be set to any size */
-            width: 100%;
-            height: 700px;
+            width: 90%;
+            height: 500px;
         }
     </style>
 
 </head>
 <body>
-<h1>Weather!</h1>
-<!--<div>Enter new location using latitude and longitude-->
-<!--    <button -->
+<h1>3 Day Weather Forecast</h1>
 
-</div>
 <div id="weather-right-now">
-<!--San antonio coordinates-->
-<!--    latitude-->
-<!--    29.424349-->
-<!--    longitude-->
-<!--    -98.491142-->
-
-<!--    alcatrazz lat  37.8267,   long -122.4233-->
-<form name="user-coordinates">
-    <label for="long">Longitude:</label>
-    <input type="text" name="long" id="long" placeholder="Enter the longitude here">
-    <label for="lat">Latitude:</label>
-    <input type="lat" name="lat" id="lat" placeholder="Enter latitude here">
-    <button type="submit" id="long-lat-btn">Submit Coordinates</button>
-</form>
 
     <h2>Current Weather in <span class="city"></span></h2>
 </div>
+
 <div id="weather-forecast">
     <h3>Forecast</h3>
 </div>
 
 <div id='map'></div>
 
-<script src="js/keys.js"></script>
+<form name="user-coordinates">
+    <label for="long">Longitude:</label>
+    <input type="text" name="long" id="long" placeholder="Enter the longitude here">
+    <label for="lat">Latitude:</label>
+    <input type="text" name="lat" id="lat" placeholder="Enter latitude here">
+    <button type="submit" id="long-lat-btn">Submit Coordinates</button>
+</form>
+
+<!--JQuery-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 <!--Mapbox JS-->
+<script src="js/keys.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
 
+<!--Custom JS-->
 <script>
 "use strict";
-    // var lati = 29.424;
-    // var longi = -98.4936;
 
 mapboxgl.accessToken = mapboxToken;
 
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    zoom:10,
-    center:[-98.519393, 29.527616]
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v9',
+//     zoom:10,
+//     center:[-98.519393, 29.527616]
+// });
+//
+// var marker = new mapboxgl.Marker()
+//     .setLngLat([-98.519393, 29.527616])
+//     .addTo(map);
+
+getWeather(29.433468,-98.499370);
+
+
+$('#long-lat-btn').click(function (event) { //id for the submit button which captures the latitude and longitude input
+     event.preventDefault();
+     var lati = $('#lat').val(); //assign latitude value to local var lati
+     var longi = $('#long').val(); //assign longitude value to local var longi
+     console.log(lati);
+     console.log(longi);
+     //pass the local variable for latitude and longitude as arguments to the getWeather function
+     getWeather(lati, longi);
 });
 
+function getWeather(lati, longi) {
+        "in get weather";
+        $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lati + "," + longi).done(function (data) {
+            // $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+ darkSkyKey +"/29.424349,-98.491142").done(function (data) {
+            console.log(data);
+            console.log(new Date(data.currently.time * 1000));
 
-(function() {
-     $('#long-lat-btn').click(function (event) { //id for the submit button which captures the latitude and longitude input
-             event.preventDefault();
-             var lati = $('#lat').val(); //assign latitude value to local var lati
-             var longi = $('#long').val(); //assign longitude value to local var longi
-             console.log(lati);
-             console.log(longi);
-             //pass the local variable for latitude and longitude as arguments to the getWeather function
-             getWeather(lati, longi);
-     });
+            // Display the current "real time" temperature information to the weather-details div
+            $('#weather-right-now').append('<p>' + "Temperature:  " + data.currently.temperature + '<br>' +
+                "Current Weather:  " + data.currently.summary + '<br>' +
+                "Humidity:  " + data.currently.humidity + '<br>' +
+                "Pressure:  " + data.currently.pressure + '<br>' +
 
-    function getWeather(lati, longi) {
-            "in get weather";
-            $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lati + "," + longi).done(function (data) {
-                // $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+ darkSkyKey +"/29.424349,-98.491142").done(function (data) {
-                console.log(data);
-                console.log(new Date(data.currently.time * 1000));
+                "Current Time: " + new Date(data.currently.time * 1000) + '</p>');
 
-                // Display the current "real time" temperature information to the weather-details div
-                $('#weather-right-now').append("Temperature:  " + data.currently.temperature + '<br>' +
-                    "Current Weather:  " + data.currently.summary + '<br>' +
-                    "Humidity:  " + data.currently.humidity + '<br>' +
-                    "Pressure:  " + data.currently.pressure + '<br>' +
+            // Display the current city by timezone label to the first h2 in body
+            $('.city').append(" " + data.timezone);
 
-                    "Current Time: " + new Date(data.currently.time * 1000));
+            //    Display forecast for today
+            $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[0].summary + '<br>' +
+                "Temperature Low:  " + data.daily.data[0].temperatureLow + '<br>' +
+                "Temperature High: " + data.daily.data[0].temperatureHigh + '<br>' +
+                "Humidity:  " + data.daily.data[0].humidity + '<br>' +
+                "Pressure:  " + data.daily.data[0].pressure + '</p>');
 
-                // Display the current city by timezone label to the first h2 in body
-                $('.city').append(" " + data.timezone);
+            // Display forecast for tomorrow
+            $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[1].summary + '<br>' +
+                "Temperature Low:  " + data.daily.data[1].temperatureLow + '<br>' +
+                "Temperature High: " + data.daily.data[1].temperatureHigh + '<br>' +
+                "Humidity:  " + data.daily.data[1].humidity + '<br>' +
+                "Pressure:  " + data.daily.data[1].pressure + '</p>');
 
-                //    Display forecast for today
-                $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[0].summary + '<br>' +
-                    "Temperature Low:  " + data.daily.data[0].temperatureLow + '<br>' +
-                    "Temperature High: " + data.daily.data[0].temperatureHigh + '<br>' +
-                    "Humidity:  " + data.daily.data[0].humidity + '<br>' +
-                    "Pressure:  " + data.daily.data[0].pressure + '</p>');
+            // Display forecast for day after tomorrow
+            $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[2].summary + '<br>' +
+                "Temperature Low:  " + data.daily.data[2].temperatureLow + '<br>' +
+                "Temperature High: " + data.daily.data[2].temperatureHigh + '<br>' +
+                "Humidity:  " + data.daily.data[2].humidity + '<br>' +
+                "Pressure:  " + data.daily.data[2].pressure + '</p>');
+        });
 
-                // Display forecast for tomorrow
-                $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[1].summary + '<br>' +
-                    "Temperature Low:  " + data.daily.data[1].temperatureLow + '<br>' +
-                    "Temperature High: " + data.daily.data[1].temperatureHigh + '<br>' +
-                    "Humidity:  " + data.daily.data[1].humidity + '<br>' +
-                    "Pressure:  " + data.daily.data[1].pressure + '</p>');
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center:[longi, lati]
+    });
 
-                // Display forecast for day after tomorrow
-                $('#weather-forecast').append('<p>' + "Summary:  " + data.daily.data[2].summary + '<br>' +
-                    "Temperature Low:  " + data.daily.data[2].temperatureLow + '<br>' +
-                    "Temperature High: " + data.daily.data[2].temperatureHigh + '<br>' +
-                    "Humidity:  " + data.daily.data[2].humidity + '<br>' +
-                    "Pressure:  " + data.daily.data[2].pressure + '</p>');
-            });
-    };
+    // Pulled some of the draggable code from the Mapbox documentation on this site -- https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    })
 
-})();
+    .setLngLat([longi, lati])
+    .addTo(map);
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        getWeather(lngLat.lat, lngLat.lng);
+
+        return console.log(lngLat.lng, lngLat.lat);
+    }
+    marker.on('dragend', onDragEnd);
+}
+
 </script>
 </body>
 </html>
