@@ -2,8 +2,19 @@ body {
     background-color: #3B94D9;
 }
 
+h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+div {
+    font-family: 'Acme', sans-serif;
+    font-size: large;
+}
+
 #map {
     /* the width and height may be set to any size */
     width: 90%;
     height: 500px;
 }
+
+
