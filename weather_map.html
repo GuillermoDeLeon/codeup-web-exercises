@@ -6,20 +6,19 @@
 
     <!--    Mapbox CSS-->
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
-
+    <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <!--    Custom CSS-->
     <link href='css/weather-map.css' rel='stylesheet'>
-
     <!--    Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 </head>
+
 <body>
 <div class="container-fluid bg-primary m-auto">
     <h2 class="city text-center"></h2>
-    <div class="text-center bg-warning" id="weather-right-now"></div>
+    <div class="text-center" id="weather-right-now"></div>
     <h2 class="text-center bg-primary">3 Day Weather Forecast</h2>
 
     <div id="weather-forecast" class="card-deck mb-3 text-center"></div>
@@ -35,17 +34,14 @@
         <input type="text" name="lat" id="lat" placeholder="Enter latitude here">
         <button type="submit" id="long-lat-btn">Submit Coordinates</button>
     </form>
-
 </div>
 
 <!--JQuery-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
 <!--Mapbox JS-->
 <script src="js/keys.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
 <script src="js/mapbox-geocoder-utils.js"></script>
-
 <!--Custom JS-->
 <script src="js/weather-map.js"></script>
 

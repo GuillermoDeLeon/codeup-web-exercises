@@ -39,8 +39,8 @@ function getWeather(lati, longi) {
         for (var i=0; i <= 2; i++) {
             displayForecast += '<div class="card" >';
             // displayForecast += '<img class="card-img-top" src=' + weatherIcon(iconArray, data.daily.data[i].icon) + '>';
-            displayForecast += "Summary:  " + data.daily.data[i].summary + '<br>';
-            displayForecast += "<img src='" + weatherIcon(iconArray, data.daily.data[i].icon) + "'>";
+            displayForecast +=  data.daily.data[i].summary + '<br>';
+            displayForecast += '<div>' + "<img src='" + weatherIcon(iconArray, data.daily.data[i].icon) + "'>" + '</div>';
             displayForecast += "Temperature Low:  " + data.daily.data[i].temperatureLow.toFixed(0) + '&deg' + "/" +  " High: " + data.daily.data[i].temperatureHigh.toFixed(0) + '&deg' + '<br>';
             displayForecast += "Humidity:  " + data.daily.data[i].humidity + '<br>';
             displayForecast += "Pressure:  " + data.daily.data[i].pressure;
@@ -49,7 +49,7 @@ function getWeather(lati, longi) {
         //display forecast gathered from the loop above to page
         $('#weather-forecast').html(displayForecast)
 
-    }); //end of ajax call
+    }); //end of ajax api call
 
     var map = new mapboxgl.Map({
         container: 'map',
@@ -109,5 +109,4 @@ function getWeather(lati, longi) {
             }
         }
     }
-
 }
