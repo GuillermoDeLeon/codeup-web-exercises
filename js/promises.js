@@ -28,9 +28,9 @@
 
 
 function gitHubCommit(userId) {
-    fetch(`https://api.github.com/users/${userId}/events/public`, {headers: {'Authorization': `token ${gitHubToken}`}})
+    return fetch(`https://api.github.com/users/${userId}/events/public`, {headers: {'Authorization': `token ${gitHubToken}`}})
         .then(response => response.json())
-        .then(data => console.log(`${userId} last commit was on ${data[0].created_at}`));
-
+        .then(data => (`${userId} last commit was on ${data[0].created_at}`));
 }
-gitHubCommit('GuillermoDeLeon');
+
+console.log(gitHubCommit('GuillermoDeLeon'));
